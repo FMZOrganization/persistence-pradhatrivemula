@@ -35,13 +35,13 @@ class MainActivity : AppCompatActivity() {
         val redSwitch= findViewById(R.id.redSwitch) as SwitchCompat
         val greenSwitch= findViewById(R.id.greenSwitch) as SwitchCompat
         val colorMaker= findViewById(R.id.colorMaker) as View
-        val df = DecimalFormat("#.##")
+        val df = DecimalFormat("#.##") // to limit the edit text values to two decimal places
 
 
         // reset all values to zero
         button?.setOnClickListener()
         {
-            val z=0;
+            val z=0; // just a random variable to initialise textbox values
             greenSlider.value=0.0F
             redSlider.value=0.0F
             blueSlider.value=0.0F
@@ -65,9 +65,10 @@ class MainActivity : AppCompatActivity() {
            try {
                val value = greenSliderVal.text.toString().toFloat()
                if(value>=0 &&value <=1){
-                   greenSlider.value=value // syncing slider value with the edit text value
+                   greenSlider.value=value //syncing slider value with the edit text value
                }
            }catch(e:java.lang.NumberFormatException){
+               // displays a toast message when values entered are greater than 1
                Toast.makeText(this@MainActivity,"Enter a value between 0 and 1", Toast.LENGTH_LONG).show()
            }
         }
@@ -77,9 +78,10 @@ class MainActivity : AppCompatActivity() {
             try {
                 val value = blueSliderVal.text.toString().toFloat()
                 if(value>=0 &&value <=1){
-                    blueSlider.value=value // syncing slider value with the edit text value
+                    blueSlider.value=value //syncing slider value with the edit text value
                 }
             }catch(e:java.lang.NumberFormatException){
+                // displays a toast message when values entered are greater than 1
                 Toast.makeText(this@MainActivity,"Enter a value between 0 and 1", Toast.LENGTH_LONG).show()
             }
         }
@@ -89,16 +91,17 @@ class MainActivity : AppCompatActivity() {
             try {
                 val value = redSliderVal.text.toString().toFloat()
                 if(value>=0 &&value <=1){
-                    redSlider.value=value // syncing slider value with the edit text value
+                    redSlider.value=value //syncing slider value with the edit text value
                 }
             }catch(e:java.lang.NumberFormatException){
+                // displays a toast message when values entered are greater than 1
                 Toast.makeText(this@MainActivity,"Enter a value between 0 and 1", Toast.LENGTH_LONG).show()
             }
         }
 
         //if green slider is moved
         greenSlider.addOnChangeListener { slider, value, fromUser ->
-            val roundoff = df.format(value)
+            val roundoff = df.format(value) // to limit the edit text values to two decimal places
             greenSliderVal.setText(roundoff.toString())  // syncing slider value with the edit text value
             val r =redSlider.value*255 // multiplying with 255 will convert the value from 0-1 scale to 0-255 scale
             val g = greenSlider.value*255 // multiplying with 255 will convert the value from 0-1 scale to 0-255 scale
@@ -111,7 +114,7 @@ class MainActivity : AppCompatActivity() {
 
         //if red slider is moved
         redSlider.addOnChangeListener { slider, value, fromUser ->
-            val roundoff = df.format(value)
+            val roundoff = df.format(value) // to limit the edit text values to two decimal places
             redSliderVal.setText(roundoff.toString())  // syncing slider value with the edit text value
             val r =redSlider.value*255 // multiplying with 255 will convert the value from 0-1 scale to 0-255 scale
             val g = greenSlider.value*255 // multiplying with 255 will convert the value from 0-1 scale to 0-255 scale
@@ -124,7 +127,7 @@ class MainActivity : AppCompatActivity() {
 
         //if blue slider is moved
         blueSlider.addOnChangeListener { slider, value, fromUser ->
-            val roundoff = df.format(value)
+            val roundoff = df.format(value) // to limit the edit text values to two decimal places
             blueSliderVal.setText(roundoff.toString()) // syncing slider value with the edit text value
             val r =redSlider.value*255 // multiplying with 255 will convert the value from 0-1 scale to 0-255 scale
             val g = greenSlider.value*255 // multiplying with 255 will convert the value from 0-1 scale to 0-255 scale
