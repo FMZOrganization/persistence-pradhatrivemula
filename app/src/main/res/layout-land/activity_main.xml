@@ -11,28 +11,28 @@
     android:screenOrientation="portrait"
     tools:context=".MainActivity">
 
-    <com.google.android.material.textview.MaterialTextView
-        android:id="@+id/textView"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="Color Maker"
-        android:textStyle="bold"
-        android:textSize="50sp"
-        android:textColor="#CF688B"
+<!--    <com.google.android.material.textview.MaterialTextView-->
+<!--        android:id="@+id/textView"-->
+<!--        android:layout_width="wrap_content"-->
+<!--        android:layout_height="wrap_content"-->
+<!--        android:text="Color Maker"-->
+<!--        android:textColor="#CF688B"-->
+<!--        android:textSize="50sp"-->
+<!--        android:textStyle="bold"-->
 
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.022" />
+<!--        app:layout_constraintBottom_toBottomOf="parent"-->
+<!--        app:layout_constraintStart_toStartOf="parent"-->
+<!--        app:layout_constraintTop_toTopOf="parent"-->
+<!--        app:layout_constraintVertical_bias="0.022" />-->
 
     <androidx.appcompat.widget.SwitchCompat
         android:id="@+id/redSwitch"
-        android:layout_width="101dp"
-        android:layout_height="60dp"
+        android:layout_width="100dp"
+        android:layout_height="55dp"
         android:background="#FFFFFF"
-        android:checked="true"
+        android:theme="@style/redSwitch"
 
+        android:checked="true"
         android:gravity="center"
         android:padding="20dp"
         android:text="R"
@@ -40,24 +40,26 @@
         android:textOff="Off"
         android:textOn="On"
         android:textSize="12sp"
-        android:theme="@style/redSwitch"
+
 
 
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.08"
+        app:layout_constraintHorizontal_bias="0.081"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.530" />
+        app:layout_constraintVertical_bias="0.459" />
 
     <androidx.appcompat.widget.SwitchCompat
         android:id="@+id/greenSwitch"
         android:layout_width="100dp"
-        android:layout_height="60dp"
+        android:layout_height="55dp"
         android:background="#FFFFFF"
+        android:theme="@style/greenSwitch"
+
+
+
         android:checked="true"
-
-
         android:gravity="center"
         android:padding="20dp"
         android:text="G"
@@ -65,23 +67,23 @@
         android:textOff="Off"
         android:textOn="On"
         android:textSize="12sp"
-        android:theme="@style/greenSwitch"
 
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.08"
+        app:layout_constraintHorizontal_bias="0.082"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.686" />
+        app:layout_constraintVertical_bias="0.612" />
 
     <androidx.appcompat.widget.SwitchCompat
         android:id="@+id/blueSwitch"
         android:layout_width="100dp"
-        android:layout_height="60dp"
+        android:layout_height="55dp"
         android:background="#FFFFFF"
+        android:theme="@style/blueSwitch"
+
+
         android:checked="true"
-
-
         android:gravity="center"
         android:padding="20dp"
         android:text="B"
@@ -89,14 +91,13 @@
         android:textOff="Off"
         android:textOn="On"
         android:textSize="12sp"
-        android:theme="@style/blueSwitch"
 
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.08"
+        app:layout_constraintHorizontal_bias="0.084"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.820" />
+        app:layout_constraintVertical_bias="0.77" />
 
     <Button
         android:id="@+id/button"
@@ -106,49 +107,46 @@
         android:text="RESET"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintHorizontal_bias="0.297"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.934" />
+        app:layout_constraintVertical_bias="0.955" />
 
     <androidx.appcompat.widget.SwitchCompat
         android:id="@+id/dontSwitch"
-        android:layout_width="179dp"
-        android:layout_height="41dp"
-        android:text="Don't Save Activity"
-        android:textColor="@color/black"
+        android:layout_width="166dp"
+        android:layout_height="43dp"
+        android:text="Don't Save Activty"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.861"
+        app:layout_constraintHorizontal_bias="0.893"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.413" />
+        app:layout_constraintVertical_bias="0.942" />
 
     <com.google.android.material.slider.Slider
         android:id="@+id/redSlider"
+        app:trackColor="#E3A3A3"
+        app:thumbColor="#D62920"
         android:layout_width="140dp"
         android:layout_height="45dp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.498"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.527"
-        app:thumbColor="#D62920"
-        app:trackColor="#E3A3A3" />
+        app:layout_constraintVertical_bias="0.461" />
 
     <com.google.android.material.slider.Slider
         android:id="@+id/greenSlider"
+        app:trackColor="#D5F4B2"
+        app:thumbColor="#08A510"
         android:layout_width="140dp"
         android:layout_height="45dp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.498"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.682"
-        app:thumbColor="#08A510"
-        app:trackColor="#D5F4B2" />
+        app:layout_constraintVertical_bias="0.609" />
 
     <com.google.android.material.slider.Slider
         android:id="@+id/blueSlider"
@@ -156,42 +154,41 @@
         android:layout_height="45dp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.501"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.816"
+        app:layout_constraintVertical_bias="0.763"
         app:thumbColor="#0126F6"
         app:trackColor="#B6BEE8" />
 
     <EditText
         android:id="@+id/redSliderVal"
         android:layout_width="90dp"
-        android:layout_height="40dp"
-        android:contentDescription="Enter Red value B/W 0 and 1 "
+        android:layout_height="45dp"
+        android:contentDescription="0"
         android:ems="10"
-        android:hint="  0.0 to 1"
         android:inputType="text"
+        android:hint="  0.0 to 1"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.903"
+        app:layout_constraintHorizontal_bias="0.906"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.52" />
+        app:layout_constraintVertical_bias="0.467" />
 
     <EditText
         android:id="@+id/greenSliderVal"
         android:layout_width="90dp"
-        android:layout_height="40dp"
+        android:layout_height="45dp"
         android:contentDescription="0"
         android:ems="10"
         android:hint="  0.0 to 1"
         android:inputType="text"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.903"
+        app:layout_constraintHorizontal_bias="0.906"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.674" />
+        app:layout_constraintVertical_bias="0.612" />
 
     <EditText
         android:id="@+id/blueSliderVal"
@@ -200,24 +197,24 @@
         android:ems="10"
         android:hint="  0.0 to 1"
         android:inputType="text"
+
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.9"
+        app:layout_constraintHorizontal_bias="0.906"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.813" />
+        app:layout_constraintVertical_bias="0.765" />
 
     <View
         android:id="@+id/colorMaker"
-        android:layout_width="360dp"
-        android:layout_height="174dp"
+        android:layout_width="512dp"
+        android:layout_height="130dp"
         android:background="@color/black"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.49"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.157" />
+        app:layout_constraintVertical_bias="0.019" />
 
 
 </androidx.constraintlayout.widget.ConstraintLayout>
